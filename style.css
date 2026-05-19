@@ -219,6 +219,32 @@ h1 {
   color: #ffa43a;
 }
 
+.website {
+  border-color: rgba(0, 174, 255, .58);
+}
+
+.website .icon {
+  background: linear-gradient(180deg, #4fd8ff, #006eff);
+}
+
+.website h2,
+.website .arrow {
+  color: #42cfff;
+}
+
+.whatsapp {
+  border-color: rgba(37, 211, 102, .58);
+}
+
+.whatsapp .icon {
+  background: linear-gradient(180deg, #4cff88, #00a63e);
+}
+
+.whatsapp h2,
+.whatsapp .arrow {
+  color: #41ff8b;
+}
+
 @media (min-width: 768px) {
   .page {
     width: 800px;
