@@ -221,15 +221,17 @@ h1 {
 
 .website {
   border-color: rgba(0, 174, 255, .58);
+  box-shadow: 0 0 22px rgba(0, 174, 255, .12);
 }
 
 .website .icon {
-  background: linear-gradient(180deg, #4fd8ff, #006eff);
+  background: linear-gradient(180deg, #42d7ff, #005eff);
+  box-shadow: 0 0 18px rgba(0, 174, 255, .35);
 }
 
 .website h2,
 .website .arrow {
-  color: #42cfff;
+  color: #39cfff;
 }
 
 .whatsapp {
