@@ -2,98 +2,351 @@
   box-sizing: border-box;
 }
 
-/* ZOOD24 THEME */
-
 body {
+  margin: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #fff;
   background: #03070d;
 }
 
+/* PAGE */
+
 .page {
+  width: min(430px, 100%);
+  min-height: 100vh;
+
+  margin: 0 auto;
+  padding: 14px 12px 30px;
+
+  position: relative;
+  overflow: hidden;
+
   background:
-    radial-gradient(circle at top, rgba(0, 125, 255, .22), transparent 32%),
-    radial-gradient(circle at 50% 0%, rgba(255, 205, 90, .14), transparent 35%),
-    linear-gradient(180deg, #040912 0%, #071425 48%, #03070d 100%);
+    radial-gradient(circle at top,
+      rgba(0, 125, 255, .22),
+      transparent 32%),
+
+    radial-gradient(circle at 50% 0%,
+      rgba(255, 205, 90, .14),
+      transparent 35%),
+
+    linear-gradient(
+      180deg,
+      #040912 0%,
+      #071425 48%,
+      #03070d 100%
+    );
 }
 
 .page::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
   background-image:
-    radial-gradient(rgba(0, 174, 255, .55) 1px, transparent 1px),
-    radial-gradient(rgba(255, 205, 90, .38) 1px, transparent 1px);
-  background-size: 24px 24px, 70px 70px;
-  opacity: .20;
+    radial-gradient(rgba(0,174,255,.42) 1px, transparent 1px),
+    radial-gradient(rgba(255,205,90,.24) 1px, transparent 1px);
+
+  background-size:
+    24px 24px,
+    72px 72px;
+
+  opacity: .18;
+}
+
+.section {
+  position: relative;
+  z-index: 1;
+}
+
+/* LOGO */
+
+.logo-section {
+  text-align: center;
+  padding: 4px 0 14px;
 }
 
 .logo-img {
+  width: 180px;
+  max-height: 60px;
+
+  object-fit: contain;
+
   filter:
-    drop-shadow(0 0 14px rgba(0, 174, 255, .55))
-    drop-shadow(0 0 10px rgba(255, 205, 90, .35));
+    drop-shadow(0 0 14px rgba(0,174,255,.55))
+    drop-shadow(0 0 10px rgba(255,205,90,.35));
+}
+
+/* BANNER */
+
+.banner-section {
+  margin-bottom: 18px;
 }
 
 .banner-img {
-  border: 1px solid rgba(0, 174, 255, .45);
+  width: 100%;
+  display: block;
+
+  border-radius: 18px;
+
+  border:
+    1px solid rgba(0,174,255,.45);
+
   box-shadow:
-    0 0 18px rgba(0, 174, 255, .20),
-    0 0 24px rgba(255, 191, 64, .12),
-    0 14px 34px rgba(0, 0, 0, .5);
+    0 0 18px rgba(0,174,255,.18),
+    0 0 24px rgba(255,191,64,.10),
+    0 14px 34px rgba(0,0,0,.50);
+}
+
+/* TEXT */
+
+.text-section {
+  text-align: center;
+  margin-bottom: 18px;
 }
 
 .badge {
-  border: 1px solid rgba(0, 174, 255, .8);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 18px;
+
+  border-radius: 999px;
+
+  border:
+    1px solid rgba(0,174,255,.75);
+
   color: #dff7ff;
+
   background:
-    linear-gradient(180deg, rgba(0,174,255,.22), rgba(255,191,64,.10));
-  box-shadow: 0 0 16px rgba(0,174,255,.22);
+    linear-gradient(
+      180deg,
+      rgba(0,174,255,.18),
+      rgba(255,191,64,.08)
+    );
+
+  font-size: 12px;
+  font-weight: 900;
+
+  box-shadow:
+    0 0 16px rgba(0,174,255,.18);
 }
 
 h1 {
+  margin: 14px 0 8px;
+
+  font-size: 24px;
+  line-height: 1.15;
+
+  font-weight: 900;
+
   color: #ffffff;
+
   text-shadow:
     0 2px 0 #000,
-    0 0 12px rgba(0,174,255,.35),
-    0 0 16px rgba(255,191,64,.18);
+    0 0 12px rgba(0,174,255,.28),
+    0 0 14px rgba(255,191,64,.12);
 }
 
-.contact-card {
-  background:
-    linear-gradient(180deg, rgba(0,174,255,.06), rgba(255,191,64,.025)),
-    rgba(5, 12, 24, .94);
+.description {
+  margin: 0;
 
-  border: 1px solid rgba(0, 174, 255, .28);
+  font-size: 13px;
+  line-height: 1.55;
+
+  font-weight: 700;
+
+  color: #eef8ff;
+}
+
+/* CONTACT SECTION */
+
+.contact-section {
+  display: grid;
+  gap: 14px;
+}
+
+/* CONTACT CARD */
+
+.contact-card {
+  min-height: 78px;
+
+  padding: 12px;
+
+  display: grid;
+
+  grid-template-columns:
+    50px
+    minmax(0, 1fr)
+    56px;
+
+  gap: 10px;
+
+  align-items: center;
+
+  text-decoration: none;
+  color: #fff;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,174,255,.05),
+      rgba(255,255,255,.02)
+    ),
+    rgba(7,12,20,.95);
+
+  border:
+    1px solid rgba(255,205,90,.30);
+
   box-shadow:
-    inset 0 0 14px rgba(0,174,255,.04),
-    0 8px 18px rgba(0,0,0,.32);
+    inset 0 0 12px rgba(0,174,255,.04),
+    0 8px 18px rgba(0,0,0,.30);
+
+  transition: .22s ease;
 }
 
 .contact-card:hover {
-  border-color: rgba(255, 205, 90, .75);
+  transform: translateY(-2px);
+
+  border-color:
+    rgba(255,205,90,.75);
+
   box-shadow:
-    0 0 18px rgba(0,174,255,.14),
+    0 0 16px rgba(0,174,255,.10),
     0 0 14px rgba(255,191,64,.10);
 }
 
-/* Badge ปุ่ม คลิก ใช้ทอง-น้ำเงิน */
+/* ICON */
+
+.icon {
+  width: 46px;
+  height: 46px;
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TEXT */
+
+.contact-text {
+  min-width: 0;
+  padding-left: 2px;
+}
+
+.contact-text h2 {
+  margin: 0 0 4px;
+
+  font-size: 15px;
+  line-height: 1.15;
+
+  font-weight: 900;
+}
+
+.contact-text p {
+  margin: 0;
+
+  font-size: 11px;
+  line-height: 1.4;
+
+  color: #e6edf5;
+
+  font-weight: 700;
+}
+
+/* BUTTON */
+
 .action-badge {
-  color: #06111f;
+  width: 56px;
+  height: 32px;
+
+  border-radius: 999px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  justify-self: end;
+  flex-shrink: 0;
+
+  font-size: 12px;
+  font-weight: 900;
+
+  color: #08131f;
 
   background:
-    linear-gradient(180deg, #fff0b8, #ffc83d 55%, #d89816);
+    linear-gradient(
+      180deg,
+      #fff0b8,
+      #ffc83d 55%,
+      #d89816
+    );
 
-  border: 1px solid rgba(255, 225, 130, .75);
+  border:
+    1px solid rgba(255,225,130,.75);
 
   box-shadow:
     0 0 10px rgba(255,191,64,.24),
-    0 0 10px rgba(0,174,255,.12),
+    0 0 10px rgba(0,174,255,.08),
     inset 0 1px 0 rgba(255,255,255,.55);
+
+  transition: .22s ease;
 }
 
-/* สีหัวข้อแต่ละช่อง */
+.contact-card:hover .action-badge {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+/* ICON GLOW */
+
+.line .icon {
+  box-shadow:
+    0 0 16px rgba(43,239,96,.22);
+}
+
+.telegram .icon {
+  box-shadow:
+    0 0 16px rgba(0,183,255,.22);
+}
+
+.livechat .icon {
+  box-shadow:
+    0 0 16px rgba(255,173,45,.22);
+}
+
+.website .icon {
+  box-shadow:
+    0 0 16px rgba(255,205,90,.22);
+}
+
+.whatsapp .icon {
+  box-shadow:
+    0 0 16px rgba(37,211,102,.22);
+}
+
+/* TITLE COLORS */
+
 .line h2,
 .whatsapp h2 {
-  color: #39ff72;
+  color: #42ff7b;
 }
 
 .telegram h2 {
-  color: #35cfff;
+  color: #39cfff;
 }
 
 .livechat h2 {
@@ -102,4 +355,58 @@ h1 {
 
 .website h2 {
   color: #ffe08a;
+}
+
+/* DESKTOP */
+
+@media (min-width: 768px) {
+
+  .page {
+    width: 800px;
+    padding: 20px 26px 40px;
+  }
+
+  .logo-img {
+    width: 230px;
+    max-height: 78px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .contact-card {
+    min-height: 90px;
+
+    padding: 16px 18px;
+
+    grid-template-columns:
+      68px
+      minmax(0, 1fr)
+      68px;
+  }
+
+  .icon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .contact-text h2 {
+    font-size: 24px;
+  }
+
+  .contact-text p {
+    font-size: 15px;
+  }
+
+  .action-badge {
+    width: 68px;
+    height: 36px;
+
+    font-size: 13px;
+  }
 }
