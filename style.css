@@ -2,307 +2,104 @@
   box-sizing: border-box;
 }
 
+/* ZOOD24 THEME */
+
 body {
-  margin: 0;
-  font-family: Tahoma, Arial, sans-serif;
-  color: #fff;
-  background: #061526;
+  background: #03070d;
 }
 
 .page {
-  width: min(430px, 100%);
-  min-height: 100vh;
-  margin: 0 auto;
-  padding: 14px 12px 28px;
   background:
-    radial-gradient(circle at top, rgba(0, 184, 255, .22), transparent 30%),
-    linear-gradient(180deg, #06243a 0%, #061526 100%);
-  position: relative;
-  overflow: hidden;
+    radial-gradient(circle at top, rgba(0, 125, 255, .22), transparent 32%),
+    radial-gradient(circle at 50% 0%, rgba(255, 205, 90, .14), transparent 35%),
+    linear-gradient(180deg, #040912 0%, #071425 48%, #03070d 100%);
 }
 
 .page::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(#ffffff55 1px, transparent 1px);
-  background-size: 22px 22px;
-  opacity: .16;
-}
-
-.section {
-  position: relative;
-  z-index: 1;
-}
-
-.logo-section {
-  padding: 4px 0 10px;
+  background-image:
+    radial-gradient(rgba(0, 174, 255, .55) 1px, transparent 1px),
+    radial-gradient(rgba(255, 205, 90, .38) 1px, transparent 1px);
+  background-size: 24px 24px, 70px 70px;
+  opacity: .20;
 }
 
 .logo-img {
-  width: 120px;
-  max-height: 42px;
-  object-fit: contain;
-}
-
-.banner-section {
-  margin-bottom: 18px;
+  filter:
+    drop-shadow(0 0 14px rgba(0, 174, 255, .55))
+    drop-shadow(0 0 10px rgba(255, 205, 90, .35));
 }
 
 .banner-img {
-  width: 100%;
-  display: block;
-  border-radius: 18px;
-  box-shadow: 0 14px 35px rgba(0, 0, 0, .28);
-}
-
-.text-section {
-  text-align: center;
+  border: 1px solid rgba(0, 174, 255, .45);
+  box-shadow:
+    0 0 18px rgba(0, 174, 255, .20),
+    0 0 24px rgba(255, 191, 64, .12),
+    0 14px 34px rgba(0, 0, 0, .5);
 }
 
 .badge {
-  display: inline-block;
-  padding: 8px 18px;
-  border: 1px solid #39d6ff;
-  border-radius: 999px;
-  color: #84e8ff;
-  background: rgba(0, 178, 255, .12);
-  font-size: 13px;
-  font-weight: 900;
-}
-
-.action-badge {
-  min-width: 62px;
-  height: 32px;
-  padding: 0 14px;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: .3px;
-
-  color: #111;
-  background: linear-gradient(180deg, #ffe8a3, #ffbf3f);
-
-  box-shadow:
-    0 0 12px rgba(255,191,64,.35),
-    inset 0 1px 0 rgba(255,255,255,.55);
-
-  transition: .22s ease;
+  border: 1px solid rgba(0, 174, 255, .8);
+  color: #dff7ff;
+  background:
+    linear-gradient(180deg, rgba(0,174,255,.22), rgba(255,191,64,.10));
+  box-shadow: 0 0 16px rgba(0,174,255,.22);
 }
 
 h1 {
-  margin: 20px 0 8px;
-  font-size: 34px;
-  line-height: 1.1;
-  font-weight: 900;
   color: #ffffff;
-}
-
-.description {
-  margin: 0 0 18px;
-  font-size: 16px;
-  line-height: 1.45;
-  font-weight: 800;
-  color: #e8f5ff;
-}
-
-.notice-box {
-  margin: 0 0 22px;
-  padding: 16px 14px;
-  text-align: left;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, .08);
-  border: 1px solid rgba(120, 220, 255, .26);
-}
-
-.notice-box p {
-  margin: 8px 0;
-  font-size: 14px;
-  line-height: 1.45;
-  font-weight: 700;
-  color: #f2fbff;
-}
-
-.notice-box span {
-  color: #ffd44a;
-  font-weight: 900;
-}
-
-.contact-section {
-  display: grid;
-  gap: 14px;
+  text-shadow:
+    0 2px 0 #000,
+    0 0 12px rgba(0,174,255,.35),
+    0 0 16px rgba(255,191,64,.18);
 }
 
 .contact-card {
-  min-height: 84px;
-  padding: 14px;
-  display: grid;
-  grid-template-columns: 62px 1fr 34px;
-  align-items: center;
-  text-decoration: none;
-  color: #fff;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, .07);
-  border: 1px solid rgba(255, 255, 255, .14);
-  transition: .22s ease;
+  background:
+    linear-gradient(180deg, rgba(0,174,255,.06), rgba(255,191,64,.025)),
+    rgba(5, 12, 24, .94);
+
+  border: 1px solid rgba(0, 174, 255, .28);
+  box-shadow:
+    inset 0 0 14px rgba(0,174,255,.04),
+    0 8px 18px rgba(0,0,0,.32);
 }
 
 .contact-card:hover {
-  transform: translateY(-3px);
-  background: rgba(255, 255, 255, .11);
+  border-color: rgba(255, 205, 90, .75);
+  box-shadow:
+    0 0 18px rgba(0,174,255,.14),
+    0 0 14px rgba(255,191,64,.10);
 }
 
-.icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  background: rgba(255,255,255,.08);
+/* Badge ปุ่ม คลิก ใช้ทอง-น้ำเงิน */
+.action-badge {
+  color: #06111f;
+
+  background:
+    linear-gradient(180deg, #fff0b8, #ffc83d 55%, #d89816);
+
+  border: 1px solid rgba(255, 225, 130, .75);
+
+  box-shadow:
+    0 0 10px rgba(255,191,64,.24),
+    0 0 10px rgba(0,174,255,.12),
+    inset 0 1px 0 rgba(255,255,255,.55);
 }
 
-.icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.contact-text {
-  padding-left: 12px;
-  text-align: left;
-}
-
-.contact-text h2 {
-  margin: 0 0 4px;
-  font-size: 22px;
-  line-height: 1.1;
-}
-
-.contact-text p {
-  margin: 0;
-  font-size: 13px;
-  color: #d9eefe;
-  font-weight: 700;
-}
-
-.arrow {
-  width: 30px;
-  height: 30px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  border: 2px solid currentColor;
-  font-size: 26px;
-  font-weight: 900;
-}
-
-.line {
-  border-color: rgba(43, 239, 96, .56);
-}
-
-.line .icon {
-  background: linear-gradient(180deg, #57f96d, #05bd2c);
-}
-
+/* สีหัวข้อแต่ละช่อง */
 .line h2,
-.line .arrow {
+.whatsapp h2 {
   color: #39ff72;
 }
 
-.telegram {
-  border-color: rgba(0, 183, 255, .58);
+.telegram h2 {
+  color: #35cfff;
 }
 
-.telegram .icon {
-  background: linear-gradient(180deg, #55d8ff, #078bd0);
-  font-size: 28px;
+.livechat h2 {
+  color: #ffbd4a;
 }
 
-.telegram h2,
-.telegram .arrow {
-  color: #34caff;
-}
-
-.livechat {
-  border-color: rgba(255, 157, 45, .58);
-}
-
-.livechat .icon {
-  background: linear-gradient(180deg, #ffb044, #ff7300);
-  font-size: 24px;
-}
-
-.livechat h2,
-.livechat .arrow {
-  color: #ffa43a;
-}
-
-.website {
-  border-color: rgba(0, 174, 255, .58);
-  box-shadow: 0 0 22px rgba(0, 174, 255, .12);
-}
-
-.website .icon {
-  background: linear-gradient(180deg, #42d7ff, #005eff);
-  box-shadow: 0 0 18px rgba(0, 174, 255, .35);
-}
-
-.website h2,
-.website .arrow {
-  color: #39cfff;
-}
-
-.whatsapp {
-  border-color: rgba(37, 211, 102, .58);
-}
-
-.whatsapp .icon {
-  background: linear-gradient(180deg, #4cff88, #00a63e);
-}
-
-.whatsapp h2,
-.whatsapp .arrow {
-  color: #41ff8b;
-}
-
-@media (min-width: 768px) {
-  .page {
-    width: 800px;
-    padding: 18px 24px 36px;
-  }
-
-  .logo-img {
-    width: 150px;
-  }
-
-  h1 {
-    font-size: 42px;
-  }
-
-  .description {
-    font-size: 19px;
-  }
-
-  .contact-card {
-    min-height: 96px;
-    grid-template-columns: 76px 1fr 42px;
-  }
-
-  .icon {
-    width: 64px;
-    height: 64px;
-  }
-
-  .contact-text h2 {
-    font-size: 28px;
-  }
-
-  .contact-text p {
-    font-size: 16px;
-  }
+.website h2 {
+  color: #ffe08a;
 }
