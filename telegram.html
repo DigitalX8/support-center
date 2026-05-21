@@ -31,7 +31,6 @@
         src="assets/telegramchannel.jpg"
         alt="Banner"
         class="banner-img"
-        id="bannerSlide"
       >
 
     </section>
@@ -103,32 +102,6 @@
 
   </div>
 
-  <!-- SLIDE SCRIPT -->
-  <script>
-
-    const banners = [
-      "assets/banner1.jpg",
-      "assets/banner2.jpg",
-      "assets/banner3.jpg"
-    ];
-
-    let current = 0;
-
-    const banner = document.getElementById("bannerSlide");
-
-    setInterval(() => {
-
-      current++;
-
-      if(current >= banners.length){
-        current = 0;
-      }
-
-      banner.src = banners[current];
-
-    }, 3000);
-
-  </script>
 
 </body>
 </html>
