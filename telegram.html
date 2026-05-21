@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Telegram Support</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- LOGO -->
+    <section class="section logo-section">
+
+      <img
+        src="assets/zood24_logo_new.png"
+        alt="Logo"
+        class="logo-img"
+      >
+
+    </section>
+
+    <!-- BANNER -->
+    <section class="section banner-section">
+
+      <img
+        src="assets/banner1.jpg"
+        alt="Banner"
+        class="banner-img"
+        id="bannerSlide"
+      >
+
+    </section>
+
+    <!-- TEXT -->
+    <section class="section text-section">
+
+      <div class="badge">
+        TELEGRAM SUPPORT
+      </div>
+
+      <h1>
+        ติดต่อทีมงานผ่าน Telegram
+      </h1>
+
+      <p class="description">
+        ช่องทางติดต่อรวดเร็ว ปลอดภัย พร้อมบริการตลอด 24 ชั่วโมง
+      </p>
+
+    </section>
+
+    <!-- BUTTON SECTION -->
+    <section class="section contact-section">
+
+      <!-- BUTTON 1 -->
+      <a
+        href="https://t.me/YourUsername"
+        target="_blank"
+        class="contact-card telegram"
+      >
+
+        <div class="icon">
+          <img src="assets/telegram-icon.png" alt="">
+        </div>
+
+        <div class="contact-text">
+          <h2>Telegram</h2>
+          <p>ติดต่อเจ้าหน้าที่ผ่าน Telegram</p>
+        </div>
+
+        <div class="action-badge">
+          OPEN
+        </div>
+
+      </a>
+
+      <!-- BUTTON 2 -->
+      <a
+        href="index.html"
+        class="contact-card website"
+      >
+
+        <div class="icon">
+          <img src="assets/home-icon.png" alt="">
+        </div>
+
+        <div class="contact-text">
+          <h2>Home Page</h2>
+          <p>กลับสู่หน้าหลักของเว็บไซต์</p>
+        </div>
+
+        <div class="action-badge">
+          BACK
+        </div>
+
+      </a>
+
+    </section>
+
+  </div>
+
+  <!-- SLIDE SCRIPT -->
+  <script>
+
+    const banners = [
+      "assets/banner1.jpg",
+      "assets/banner2.jpg",
+      "assets/banner3.jpg"
+    ];
+
+    let current = 0;
+
+    const banner = document.getElementById("bannerSlide");
+
+    setInterval(() => {
+
+      current++;
+
+      if(current >= banners.length){
+        current = 0;
+      }
+
+      banner.src = banners[current];
+
+    }, 3000);
+
+  </script>
+
+</body>
+</html>
